@@ -186,7 +186,9 @@
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
     if (editing != _editing) {
+        
         _editing = editing;
+        
         if (animated) {
             [UIView animateWithDuration:0.2f
                                   delay:0.f
@@ -200,7 +202,9 @@
         }
 		
         self.contentView.userInteractionEnabled = !editing;
-        [self shakeStatus:editing];
+        
+        // [self shakeStatus:editing];
+        
     }
 }
 
